@@ -8,7 +8,8 @@ export function Curiosities() {
   return (
     <section
       id="curiosities"
-      style={{ padding: '7rem 3rem', background: 'var(--cream)' }}
+      className="section-pad"
+      style={{ background: 'var(--cream)' }}
     >
       <div style={{ maxWidth: '1100px', margin: '0 auto' }}>
         <motion.div
@@ -50,11 +51,8 @@ export function Curiosities() {
         </motion.div>
 
         <div
-          style={{
-            display: 'grid',
-            gridTemplateColumns: 'repeat(3, 1fr)',
-            gap: '1.25rem',
-          }}
+          className="three-col"
+          style={{}}
         >
           {curiosities.map((item, i) => (
             <CuriosityCard key={item.title} item={item} index={i} inView={inView} />
@@ -109,9 +107,9 @@ function CuriosityCard({
         }}
       />
 
-      <span style={{ fontSize: '2rem', marginBottom: '1rem', display: 'block' }}>
-        {item.emoji}
-      </span>
+      <div style={{ marginBottom: '1rem', color: 'var(--accent)' }}>
+        <item.icon size={22} strokeWidth={1.5} />
+      </div>
       <div
         style={{
           fontFamily: '"Cormorant Garamond", Georgia, serif',

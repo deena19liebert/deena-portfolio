@@ -8,7 +8,8 @@ export function Beyond() {
   return (
     <section
       id="beyond"
-      style={{ padding: '7rem 3rem', background: 'var(--cream)' }}
+      className="section-pad"
+      style={{ background: 'var(--cream)' }}
     >
       <div ref={ref} style={{ maxWidth: '1100px', margin: '0 auto' }}>
         <motion.div
@@ -49,11 +50,8 @@ export function Beyond() {
         </motion.div>
 
         <div
-          style={{
-            display: 'grid',
-            gridTemplateColumns: 'repeat(4, 1fr)',
-            gap: '1.25rem',
-          }}
+          className="four-col"
+          style={{}}
         >
           {beyondItems.map((item, i) => (
             <motion.div
@@ -78,9 +76,9 @@ export function Beyond() {
                 cursor: 'default',
               }}
             >
-              <span style={{ fontSize: '2.5rem', marginBottom: '1rem', display: 'block' }}>
-                {item.emoji}
-              </span>
+              <div style={{ marginBottom: '1rem', color: 'var(--accent)' }}>
+                <item.icon size={24} strokeWidth={1.5} />
+              </div>
               <div
                 style={{
                   fontFamily: '"Cormorant Garamond", Georgia, serif',

@@ -13,11 +13,11 @@ export function Hero() {
   return (
     <section
       id="hero"
+      className="hero-pad"
       style={{
         minHeight: '100vh',
         display: 'flex',
         alignItems: 'center',
-        padding: '8rem 3rem 4rem',
         position: 'relative',
         overflow: 'hidden',
       }}
@@ -45,14 +45,11 @@ export function Hero() {
       </div>
 
       <div
+        className="hero-grid"
         style={{
           maxWidth: '1100px',
           margin: '0 auto',
           width: '100%',
-          display: 'grid',
-          gridTemplateColumns: '1fr auto',
-          gap: '4rem',
-          alignItems: 'center',
           position: 'relative',
           zIndex: 1,
         }}
@@ -159,6 +156,7 @@ export function Hero() {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 0.8, delay: 0.7 }}
+          className="hero-photo"
           style={{
             width: '280px',
             height: '340px',
@@ -196,9 +194,6 @@ export function Hero() {
               padding: '1rem',
             }}
           >
-            Add photo.jpg
-            <br />
-            to /public
           </p>
         </motion.div>
       </div>

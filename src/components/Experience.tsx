@@ -8,7 +8,8 @@ export function Experience() {
   return (
     <section
       id="experience"
-      style={{ padding: '7rem 3rem', background: 'var(--off-white)' }}
+      className="section-pad"
+      style={{ background: 'var(--off-white)' }}
     >
       <div
         ref={ref}

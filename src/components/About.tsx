@@ -1,24 +1,25 @@
 import { motion } from 'framer-motion'
 import { useInView } from '../hooks/useInView'
+import { Search, HeartHandshake, Ruler, Sprout, type LucideIcon } from 'lucide-react'
 
-const beliefs = [
+const beliefs: { icon: LucideIcon; title: string; text: string }[] = [
   {
-    icon: '🔍',
+    icon: Search,
     title: 'Curious by default',
     text: "I start with questions, not answers. Every project begins with 'why does this problem exist?'",
   },
   {
-    icon: '🤝',
+    icon: HeartHandshake,
     title: 'Empathy in the architecture',
     text: 'The best systems account for the people who depend on them — their trust, their limits, their needs.',
   },
   {
-    icon: '📐',
+    icon: Ruler,
     title: 'Research informs craft',
     text: 'I believe in understanding deeply before building. Speed matters less than building the right thing.',
   },
   {
-    icon: '🌱',
+    icon: Sprout,
     title: 'Always learning',
     text: 'CGPA 8.3 · ML cert from Stanford · Google Cybersecurity cert · Still just getting started.',
   },
@@ -30,20 +31,18 @@ export function About() {
   return (
     <section
       id="about"
-      style={{ padding: '7rem 3rem', background: 'var(--off-white)' }}
+      className="section-pad"
+      style={{ background: 'var(--off-white)' }}
     >
       <motion.div
         ref={ref}
         initial={{ opacity: 0, y: 28 }}
         animate={inView ? { opacity: 1, y: 0 } : {}}
         transition={{ duration: 0.7, ease: [0.22, 1, 0.36, 1] }}
+        className="two-col"
         style={{
           maxWidth: '1100px',
           margin: '0 auto',
-          display: 'grid',
-          gridTemplateColumns: '1fr 1fr',
-          gap: '5rem',
-          alignItems: 'start',
         }}
       >
         {/* Text column */}
@@ -156,8 +155,8 @@ export function About() {
                   'var(--accent-light)')
               }
             >
-              <div style={{ fontSize: '1.4rem', marginBottom: '0.5rem' }}>
-                {b.icon}
+              <div style={{ marginBottom: '0.75rem', color: 'var(--accent)' }}>
+                <b.icon size={20} strokeWidth={1.5} />
               </div>
               <div
                 style={{

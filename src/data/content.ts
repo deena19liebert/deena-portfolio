@@ -1,3 +1,15 @@
+import {
+  Brain,
+  HeartHandshake,
+  Accessibility,
+  ShieldCheck,
+  Layers,
+  Globe,
+  Music,
+  PersonStanding,
+  Users,
+  BookOpen,
+} from 'lucide-react'
 import type {
   CuriosityItem,
   ExperienceItem,
@@ -9,42 +21,42 @@ import type {
 
 export const curiosities: CuriosityItem[] = [
   {
-    emoji: '🧠',
+    icon: Brain,
     title: 'Artificial Intelligence',
     description:
       'Not the buzzword — the deeper question of how machines can reason, adapt, and know when they don\'t know.',
     note: 'Currently: multimodal learning & LLM reasoning',
   },
   {
-    emoji: '🧬',
+    icon: HeartHandshake,
     title: 'Psychology',
     description:
       'Why do people decide what they decide? Understanding behavior is what separates useful software from clever software.',
     note: 'Especially: cognitive biases & trust formation',
   },
   {
-    emoji: '♿',
+    icon: Accessibility,
     title: 'Accessibility',
     description:
       'Technology built for everyone, not just power users. Accessibility isn\'t a feature — it\'s a measure of how much we care.',
     note: 'Should be the default, not an afterthought',
   },
   {
-    emoji: '🕵️',
+    icon: ShieldCheck,
     title: 'Trust & Safety',
     description:
       'The internet is full of deception. Building systems that help people navigate that is genuinely important work.',
     note: 'ScamShield, fake review detection',
   },
   {
-    emoji: '🎨',
+    icon: Layers,
     title: 'Human-Centered Design',
     description:
       'Design isn\'t decoration. It\'s the layer between intent and understanding — and it deserves engineering rigor.',
     note: 'Where UX meets systems thinking',
   },
   {
-    emoji: '🌐',
+    icon: Globe,
     title: 'Human Behavior Online',
     description:
       'How does the medium change the message? How do people form beliefs, trust strangers, and make decisions on the internet?',
@@ -113,22 +125,22 @@ export const questions: Question[] = [
 
 export const beyondItems: BeyondItem[] = [
   {
-    emoji: '🎵',
+    icon: Music,
     title: 'Music',
     description: 'My thinking companion. I probably have a song for every problem I\'ve ever solved.',
   },
   {
-    emoji: '💃',
+    icon: PersonStanding,
     title: 'Dance',
     description: 'Where logic gives way to feeling. It\'s the most honest kind of expression I know.',
   },
   {
-    emoji: '🤝',
+    icon: Users,
     title: 'People',
     description: 'I\'m genuinely fascinated by different lives, perspectives, and ways of seeing the world.',
   },
   {
-    emoji: '📚',
+    icon: BookOpen,
     title: 'Continuous Learning',
     description: 'Psychology, behavior, systems, design — the world is an endlessly interesting place.',
   },

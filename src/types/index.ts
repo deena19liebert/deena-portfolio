@@ -1,10 +1,12 @@
+import type { LucideIcon } from 'lucide-react'
+
 export interface NavLink {
   label: string
   href: string
 }
 
 export interface CuriosityItem {
-  emoji: string
+  icon: LucideIcon
   title: string
   description: string
   note: string
@@ -35,7 +37,7 @@ export interface Question {
 }
 
 export interface BeyondItem {
-  emoji: string
+  icon: LucideIcon
   title: string
   description: string
 }

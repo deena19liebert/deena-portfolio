@@ -8,7 +8,8 @@ export function Questions() {
   return (
     <section
       id="questions"
-      style={{ padding: '7rem 3rem', background: 'var(--off-white)' }}
+      className="section-pad"
+      style={{ background: 'var(--off-white)' }}
     >
       <div ref={ref} style={{ maxWidth: '1100px', margin: '0 auto' }}>
         <motion.div
@@ -48,11 +49,8 @@ export function Questions() {
         </motion.div>
 
         <div
-          style={{
-            display: 'grid',
-            gridTemplateColumns: 'repeat(2, 1fr)',
-            gap: '1rem',
-          }}
+          className="two-col-questions"
+          style={{}}
         >
           {questions.map((q, i) => (
             <motion.div

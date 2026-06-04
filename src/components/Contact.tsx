@@ -1,21 +1,22 @@
 import { motion } from 'framer-motion'
 import { useInView } from '../hooks/useInView'
+import { Mail, Link2, GitBranch } from 'lucide-react'
 
 const links = [
   {
-    icon: '✉️',
+    icon: Mail,
     label: 'Email',
     value: 'deenaliebert@gmail.com',
     href: 'mailto:deenaliebert@gmail.com',
   },
   {
-    icon: '💼',
+    icon: Link2,
     label: 'LinkedIn',
     value: 'linkedin.com/in/deena137',
     href: 'https://linkedin.com/in/deena137',
   },
   {
-    icon: '🐙',
+    icon: GitBranch,
     label: 'GitHub',
     value: 'github.com/deena19liebert',
     href: 'https://github.com/deena19liebert',
@@ -28,8 +29,8 @@ export function Contact() {
   return (
     <section
       id="contact"
+      className="section-pad"
       style={{
-        padding: '7rem 3rem',
         background: 'var(--cream)',
         minHeight: '50vh',
         display: 'flex',
@@ -38,14 +39,11 @@ export function Contact() {
     >
       <div
         ref={ref}
+        className="two-col-center"
         style={{
           maxWidth: '1100px',
           margin: '0 auto',
           width: '100%',
-          display: 'grid',
-          gridTemplateColumns: '1fr 1fr',
-          gap: '5rem',
-          alignItems: 'center',
         }}
       >
         {/* Left */}
@@ -133,11 +131,11 @@ export function Contact() {
                     display: 'flex',
                     alignItems: 'center',
                     justifyContent: 'center',
-                    fontSize: '1rem',
                     flexShrink: 0,
+                    color: 'var(--accent)',
                   }}
                 >
-                  {link.icon}
+                  <link.icon size={16} strokeWidth={1.5} />
                 </div>
                 <div>
                   <span

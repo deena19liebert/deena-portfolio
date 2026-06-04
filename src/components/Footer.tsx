@@ -1,14 +1,6 @@
 export function Footer() {
   return (
-    <footer
-      style={{
-        padding: '2rem 3rem',
-        borderTop: '0.5px solid var(--warm-gray)',
-        display: 'flex',
-        justifyContent: 'space-between',
-        alignItems: 'center',
-      }}
-    >
+    <footer className="footer-inner" style={{ borderTop: '0.5px solid var(--warm-gray)' }}>
       <span style={{ fontSize: '0.8rem', color: 'var(--mid-gray)' }}>
         © 2026 Deena T A
       </span>

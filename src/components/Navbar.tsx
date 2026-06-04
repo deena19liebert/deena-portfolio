@@ -17,7 +17,7 @@ export function Navbar() {
         left: 0,
         right: 0,
         zIndex: 900,
-        padding: '1.2rem 3rem',
+        padding: '1.2rem 1.25rem',
         display: 'flex',
         justifyContent: 'space-between',
         alignItems: 'center',
@@ -41,15 +41,7 @@ export function Navbar() {
         Deena T A
       </a>
 
-      <ul
-        style={{
-          display: 'flex',
-          gap: '2rem',
-          listStyle: 'none',
-          margin: 0,
-          padding: 0,
-        }}
-      >
+      <ul className="nav-links">
         {links.map((link) => (
           <li key={link.href}>
             <a

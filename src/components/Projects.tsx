@@ -1,6 +1,7 @@
 import { motion } from 'framer-motion'
 import { useInView } from '../hooks/useInView'
 import { projects } from '../data/content'
+import { FileText } from 'lucide-react'
 
 export function Projects() {
   const { ref, inView } = useInView<HTMLDivElement>()
@@ -8,7 +9,8 @@ export function Projects() {
   return (
     <section
       id="projects"
-      style={{ padding: '7rem 3rem', background: 'var(--cream)' }}
+      className="section-pad"
+      style={{ background: 'var(--cream)' }}
     >
       <div ref={ref} style={{ maxWidth: '1100px', margin: '0 auto' }}>
         <motion.div
@@ -51,6 +53,7 @@ export function Projects() {
         <div style={{ display: 'flex', flexDirection: 'column', gap: '2rem' }}>
           {projects.map((project, i) => (
             <motion.div
+              className="project-card"
               key={project.title}
               initial={{ opacity: 0, y: 24 }}
               animate={inView ? { opacity: 1, y: 0 } : {}}
@@ -134,7 +137,7 @@ export function Projects() {
                       marginBottom: '0.75rem',
                     }}
                   >
-                    📄 Peer-Reviewed Research Paper
+                    <FileText size={12} strokeWidth={1.5} /> Peer-Reviewed Research Paper
                   </span>
                 )}
 

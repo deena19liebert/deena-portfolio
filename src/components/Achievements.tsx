@@ -8,7 +8,8 @@ export function Achievements() {
   return (
     <section
       id="achievements"
-      style={{ padding: '7rem 3rem', background: 'var(--off-white)' }}
+      className="section-pad"
+      style={{ background: 'var(--off-white)' }}
     >
       <div ref={ref} style={{ maxWidth: '1100px', margin: '0 auto' }}>
         <motion.div
@@ -48,11 +49,8 @@ export function Achievements() {
         </motion.div>
 
         <div
-          style={{
-            display: 'grid',
-            gridTemplateColumns: 'repeat(3, 1fr)',
-            gap: '1.25rem',
-          }}
+          className="three-col"
+          style={{}}
         >
           {achievements.map((item, i) => (
             <motion.div
