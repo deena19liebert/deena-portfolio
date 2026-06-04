@@ -10,7 +10,7 @@ export function Footer() {
       }}
     >
       <span style={{ fontSize: '0.8rem', color: 'var(--mid-gray)' }}>
-        © 2025 Deena T A
+        © 2026 Deena T A
       </span>
       <span
         style={{
